@@ -279,15 +279,15 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[.8fr_1.2fr] lg:px-8">
           <div className="relative">
             <div className="overflow-hidden rounded-3xl border border-white/10 bg-slate-900 shadow-2xl">
-              <div className="relative aspect-[3/2]">
-                <Image
-                  src="/images/about/raymond-consultant-about.jpg"
-                  alt="Raymond Resurreccion of Connect2U Data Solutions"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(min-width: 1024px) 38vw, 90vw"
-                />
-              </div>
+       <div className="relative aspect-[4/3]">
+            <Image
+              src="/images/about/raymond-consultant-about.jpg"
+              alt="Raymond Resurreccion of Connect2U Data Solutions"
+              fill
+              className="object-cover object-top"
+              sizes="(min-width: 1024px) 38vw, 90vw"
+            />
+          </div>
             </div>
           </div>
 
