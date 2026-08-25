@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ContactForm from "./components/ContactForm";
 const services = [
   {
@@ -145,48 +146,27 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Hero side panel */}
+          {/* Hero professional image */}
           <div className="flex items-center">
-            <div className="w-full rounded-3xl border border-white/10 bg-white/[0.04] p-7 shadow-2xl backdrop-blur">
-              <div className="mb-6 flex items-center gap-2">
-                <span className="h-3 w-3 rounded-full bg-red-400" />
-                <span className="h-3 w-3 rounded-full bg-amber-300" />
-                <span className="h-3 w-3 rounded-full bg-emerald-400" />
-                <span className="ml-3 font-mono text-xs text-slate-500">
-                  business_problem.sql
-                </span>
-              </div>
-
-              <div className="space-y-4 font-mono text-sm leading-7">
-                <p>
-                  <span className="text-purple-300">SELECT</span>{" "}
-                  <span className="text-cyan-300">answers</span>
-                </p>
-                <p>
-                  <span className="text-purple-300">FROM</span>{" "}
-                  <span className="text-emerald-300">your_business_data</span>
-                </p>
-                <p>
-                  <span className="text-purple-300">WHERE</span>{" "}
-                  problem ={" "}
-                  <span className="text-amber-200">'needs solving'</span>;
-                </p>
-
-                <div className="my-5 border-t border-white/10" />
-
-                <p className="text-slate-500">-- Result</p>
-                <p>
-                  <span className="text-emerald-300">✓</span> Cleaner data
-                </p>
-                <p>
-                  <span className="text-emerald-300">✓</span> Faster reporting
-                </p>
-                <p>
-                  <span className="text-emerald-300">✓</span> Less manual work
-                </p>
-                <p>
-                  <span className="text-emerald-300">✓</span> Better answers
-                </p>
+            <div className="relative w-full overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-2xl">
+              <div className="relative aspect-[4/5]">
+                <Image
+                  src="/images/hero/raymond-sql-consulting-office-hero.jpg"
+                  alt="Raymond Resurreccion, founder of Connect2U Data Solutions, working in a professional office"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                  sizes="(min-width: 1024px) 34vw, 90vw"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/10 bg-slate-950/80 p-5 backdrop-blur-md">
+                  <p className="font-mono text-xs tracking-[0.18em] text-cyan-300">
+                    CONNECT2U DATA SOLUTIONS
+                  </p>
+                  <p className="mt-2 text-lg font-bold text-white">
+                    Practical solutions. Direct access to the person doing the work.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -296,35 +276,51 @@ export default function Home() {
 
       {/* About */}
       <section id="about" className="py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[.8fr_1.2fr] lg:px-8">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[.8fr_1.2fr] lg:px-8">
+          <div className="relative">
+            <div className="overflow-hidden rounded-3xl border border-white/10 bg-slate-900 shadow-2xl">
+              <div className="relative aspect-[3/2]">
+                <Image
+                  src="/images/about/raymond-consultant-about.jpg"
+                  alt="Raymond Resurreccion of Connect2U Data Solutions"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(min-width: 1024px) 38vw, 90vw"
+                />
+              </div>
+            </div>
+          </div>
+
           <div>
             <p className="font-semibold uppercase tracking-[0.25em] text-cyan-300">
               Why Connect2U?
             </p>
+
             <h2 className="mt-4 text-4xl font-bold tracking-tight">
               Start with the business question.
             </h2>
-          </div>
 
-          <div className="space-y-6 text-lg leading-8 text-slate-300">
-            <p>
-              I'm Raymond Resurreccion, the person behind Connect2U Data
-              Solutions. I've spent years working with business data,
-              databases, reporting processes, ETL workflows, and the messy
-              real-world problems that happen between systems.
-            </p>
+            <div className="mt-7 space-y-6 text-lg leading-8 text-slate-300">
+              <p>
+                I&apos;m Raymond Resurreccion, the person behind Connect2U Data
+                Solutions. I&apos;ve spent years working with business data,
+                databases, reporting processes, ETL workflows, and the messy
+                real-world problems that happen between systems.
+              </p>
 
-            <p>
-              My approach is straightforward: understand what you're trying to
-              accomplish first, then determine the simplest reliable technical
-              solution.
-            </p>
+              <p>
+                My approach is straightforward: understand what you&apos;re trying to
+                accomplish first, then determine the simplest reliable technical
+                solution.
+              </p>
 
-            <p>
-              Connect2U is especially suited for businesses that have a data
-              problem but don't necessarily need—or want—a large consulting
-              engagement.
-            </p>
+              <p>
+                Connect2U is especially suited for businesses that have a data
+                problem but don&apos;t necessarily need—or want—a large consulting
+                engagement. You work directly with me from the initial conversation
+                through the solution.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -348,13 +344,22 @@ export default function Home() {
       </p>
 
       <div className="mt-8 rounded-2xl border border-white/10 bg-slate-950 p-6">
-        <p className="text-sm text-slate-500">Prefer email?</p>
-        <a
-          href="mailto:hello@connect2u.xyz"
-          className="mt-2 inline-block font-semibold text-cyan-300 hover:text-cyan-200"
-        >
-          hello@connect2u.xyz
-        </a>
+        <p className="text-sm text-slate-500">Prefer email, phone, or text?</p>
+        <div className="mt-3 flex flex-col gap-2">
+          <a
+            href="mailto:hello@connect2u.xyz"
+            className="font-semibold text-cyan-300 hover:text-cyan-200"
+          >
+            hello@connect2u.xyz
+          </a>
+          <a
+            href="tel:+15626740039"
+            className="font-semibold text-cyan-300 hover:text-cyan-200"
+          >
+            562-674-0039
+          </a>
+          <p className="text-xs text-slate-500">Call or text</p>
+        </div>
       </div>
     </div>
 
