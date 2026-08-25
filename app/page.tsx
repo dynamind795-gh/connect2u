@@ -1,3 +1,4 @@
+import ContactForm from "./components/ContactForm";
 const services = [
   {
     title: "SQL & Database Solutions",
@@ -328,32 +329,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="px-6 pb-24 lg:px-8">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl bg-cyan-400 px-7 py-14 text-slate-950 sm:px-12 lg:px-16">
-          <div className="grid items-center gap-10 lg:grid-cols-[1fr_auto]">
-            <div>
-              <p className="font-semibold uppercase tracking-[0.22em]">
-                Let's solve something
-              </p>
-              <h2 className="mt-3 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">
-                Have a data problem you've been putting off?
-              </h2>
-              <p className="mt-5 max-w-2xl text-lg text-slate-800">
-                Tell me what's happening, what you've tried, and what you'd
-                like the end result to look like.
-              </p>
-            </div>
+      {/* Contact */}
+<section id="contact" className="border-t border-white/10 bg-slate-900/60 py-24">
+  <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
+    <div>
+      <p className="font-semibold uppercase tracking-[0.25em] text-cyan-300">
+        Let's Talk
+      </p>
 
-            <a
-              href="mailto:hello@connect2u.xyz?subject=Connect2U%20Data%20Project"
-              className="rounded-xl bg-slate-950 px-7 py-4 text-center font-bold text-white transition hover:bg-slate-800"
-            >
-              hello@connect2u.xyz
-            </a>
-          </div>
-        </div>
-      </section>
+      <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+        Tell me about your data problem.
+      </h2>
+
+      <p className="mt-6 text-lg leading-8 text-slate-400">
+        You don't need to know the technical solution. Tell me what's
+        happening, what you've tried, and what you'd like the end result to
+        look like.
+      </p>
+
+      <div className="mt-8 rounded-2xl border border-white/10 bg-slate-950 p-6">
+        <p className="text-sm text-slate-500">Prefer email?</p>
+        <a
+          href="mailto:hello@connect2u.xyz"
+          className="mt-2 inline-block font-semibold text-cyan-300 hover:text-cyan-200"
+        >
+          hello@connect2u.xyz
+        </a>
+      </div>
+    </div>
+
+    <ContactForm />
+  </div>
+</section>
 
       {/* Footer */}
       <footer className="border-t border-white/10">
