@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://connect2u.xyz"),
 
   title: {
-    default: "Connect2U Data Solutions | SQL, Reporting & Automation",
+    default: "Connect2U | SQL Server & ETL Consulting",
     template: "%s | Connect2U Data Solutions",
   },
 
   description:
-    "Practical SQL, database, reporting, data integration, data cleanup and automation solutions for businesses.",
+    "SQL Server performance, SSIS ETL, T-SQL development, reporting automation, migration, and data-quality consulting.",
 
   keywords: [
     "SQL consultant",

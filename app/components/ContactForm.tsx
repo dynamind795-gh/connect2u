@@ -180,7 +180,7 @@ export default function ContactForm() {
             className="mt-5 rounded-xl border border-emerald-400/30 bg-emerald-400/10 p-4 text-emerald-300"
             role="status"
           >
-            ✓ Thanks! Your message was sent successfully. I'll get back to you
+            ✓ Thanks! Your message was sent successfully. I&apos;ll get back to you
             soon.
           </div>
         )}
